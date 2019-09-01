@@ -33,8 +33,8 @@ require(sandwich); require(lmtest)
 
 #+ message=FALSE
 ## Read Data
-d <- readRDS("../data/main_data_final.rds")
-#d <- read_dta("../data/main_data_final.dta", encoding="UTF-8")
+d <- readRDS("../data_public/main_data_v1.rds")
+#d <- read_dta("../data_public/main_data_v1.dta", encoding="UTF-8")
 nrow(d)
 
 ## Drop Respondents (Currently NULL)

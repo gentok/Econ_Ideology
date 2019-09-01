@@ -2,10 +2,10 @@
 
 ## なぜ日本の左派は金融緩和に反対するのか：サーベイ実験による政策選好の「ねじれ」の検証
 
-* #### [ワーキングペーパー (8/31/2019)](papers/Econ_Ideology_Paper.pdf)
+* #### [ワーキングペーパー (9/1/2019)](papers/Econ_Ideology_Paper.pdf)
 
 ## 著者
-ANNNAKA, Susumu 安中進
+ANNNAKA, Susumu 安中進 <br>
 KATO, Gento 加藤言人 (gento.badgerATgmail.com)
 
 ## 概要
