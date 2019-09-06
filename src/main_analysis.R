@@ -261,7 +261,6 @@ vnx <- c(vn[1:6],"ƒCƒfƒIƒƒM[",vn[7:16],
          "ƒCƒfƒIƒƒM[~5.¬’·••n¢•ŠwŽÒ")
 vnx2 <- c(vn,vnx[c(7,18:34)])
 
-
 #'
 #' ## ŽÀŒ±ŽhŒƒ‚Ì’¼ÚŒø‰Ê
 #'
@@ -284,11 +283,11 @@ pr <- simu_pred(m_easing, profile=preddata, vcov.est = "robust")
 
 pr_easing <- data.frame(t = names(table(d$g_easing)),
                         t_jp = c("“§ŒQ",
-                                 "ŒoÏ¬’·",
-                                 "ŒoÏ¬’·&\n•n¢íŒ¸",
-                                 "ŒoÏ¬’·&\nŠi·k¬", 
-                                 "ŒoÏ¬’·&\nŠwŽÒŽ^¬",
-                                 "ŒoÏ¬’·&\n•n¢íŒ¸&\nŠwŽÒŽ^¬"),
+                                 "1.ŒoÏ¬’·",
+                                 "2.ŒoÏ¬’·&\n•n¢íŒ¸",
+                                 "3.ŒoÏ¬’·&\nŠi·k¬", 
+                                 "4.ŒoÏ¬’·&\nŠwŽÒŽ^¬",
+                                 "5.ŒoÏ¬’·&\n•n¢íŒ¸&\nŠwŽÒŽ^¬"),
                         pr = pr$predsum$Mean,
                         loCI = pr$predsum$lowerCI,
                         upCI = pr$predsum$upperCI)
