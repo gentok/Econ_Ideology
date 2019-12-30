@@ -5,6 +5,10 @@ data/
 resources/
 literature/
 src/pilot/
+src/old/
+paper/manuscript/
+out/old/
+
 
 # Ignore generated latex files
 *.ini

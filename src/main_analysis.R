@@ -47,7 +47,19 @@ dtmp <- d[complete.cases(d[,c("knall","fem","age","lvlen","ownh",
   "edu3","wk","mar","cld")]),]
 nrow(dtmp)
 
-table(dtmp$g_easing)
+#'
+#' # イデオロギー指標間の相関
+#' 
+
+require(xtable)
+
+ctab <- cor(d[,c("ide_self","ide_psup","ide_iss_1","ide_iss_2")])
+ctab[upper.tri(ctab)] <- NA
+colnames(ctab) <- rownames(ctab) <- c("自己申告","政党支持","外交安全保障","権利機会平等")
+
+print(xtable(ctab, digits=3,caption="イデオロギー指標間の相関"), 
+      caption.placement="top")
+
 
 #'
 #' # 記述統計
@@ -272,7 +284,7 @@ m0 <- m_easing
 table_coef(list(m0), vcov.est="robust", 
            single.row=TRUE, custom.variable.names = vn,
            m.names = "基本モデル", dcolumn = TRUE,
-           caption="実験情報刺激が金融緩和選好に与える効果（重回帰分析）",
+           caption="金融緩和選好をイデオロギーと情報環境刺激によって説明する（重回帰分析）",
            custom.footnote = "最小二乗法による重回帰分析、ロバスト標準誤差使用．",
            label="basetab",
            format = "tex", file.name = "../out/basetab")

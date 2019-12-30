@@ -1,26 +1,32 @@
 # 金融緩和実験レプリケーションデータ
 
-## なぜ日本の左派は金融緩和に反対するのか：サーベイ実験による政策選好の「ねじれ」の検証
+## 日本における「ねじれ」た金融緩和選好を説明する：イデオロギーと政策選好の関係に情報環境が与える影響の実験的検証
 
-* #### [ワーキングペーパー (9/6/2019)](paper/Econ_Ideology_Paper.pdf)
+Explaining "Twisted" Preferences Toward Monetary Easing in Japan: Experimental Evidence of the Effect of the Information Environment on the Relationship Between Ideology and Policy Preferences
+
+* #### [ワーキングペーパー (12/30/2019)](paper/Econ_Ideology_Paper_v4_2_all.pdf)
+* #### [オンライン付録(12/30/2019)](paper/Econ_Ideology_Paper_v4_appendix.pdf)
+<!-- * [ワーキングペーパー (9/6/2019)](paper/Econ_Ideology_Paper.pdf) -->
 
 ## 著者
-ANNNAKA, Susumu 安中進 (profound@moegi.waseda.jp)<br>
-KATO, Gento 加藤言人 (gento.badgerATgmail.com)
+KATO, Gento 加藤言人 (gento.badgerATgmail.com)<br>
+ANNAKA, Susumu 安中進 (profoundATmoegi.waseda.jp)
 
 ## 概要
-特定の政策において、日本で「左派」と呼ばれる政党やその支持者は、欧米における左派政党とは逆の「ねじれ」た選好を持つことが指摘されてきた。特に金融緩和政策においては、欧米では緩和拡大に左派が積極的で右派が消極的である傾向がみられる一方で、日本では左派が緩和拡大に反対する動きが根強いことが知られている。この「ねじれ」が生じる要因に関しては様々な指摘がなされてきた一方で、経験的な検証は行われてこなかった。本稿では日本の有権者を対象にサーベイ実験を行い、情報量、争点フレーム、そして専門家の意見分布の側面から左派有権者の金融緩和政策選好を規定する要因を探る。実験では、社会平等フレームと経済学者の賛成意見という２つの情報が同時に提示された条件下で、左派有権者が右派有権者と同じかそれ以上に金融緩和を支持する傾向が見られた。ただし、２つの情報刺激のうちどちらかだけが提示された条件下では「ねじれ」が解消されなかった。実験結果は、争点フレームと専門家の意見の組み合わせが金融緩和に対する意見形成に重要な役割を果たしていることを示唆している。この知見は、日本における金融緩和政策選好のパターンが欧米とは異なる要因について、有権者の意見形成プロセスの側面から新しい理解を与えるものである。
+特定の政策において、日本で「左派」や「右派」と呼ばれる政党やその支持者は、欧米における左派や右派とは逆の「ねじれ」た選好を持つことが指摘されてきた。特に金融緩和政策では、緩和拡大に対し、欧米では左派が右派に比べて積極的な傾向がある一方で、日本では左派が反対する動きが根強い。この要因に関しては様々な議論があるが、経験的な検証は行われていない。本稿では日本の有権者を対象にサーベイ実験を行い、情報環境の側面からイデオロギーと金融緩和選好の関係を規定する要因を探る。実験では、特に貧困削減フレームと経済学者の賛成意見が同時に提示された条件下で、左派が右派と同程度かそれ以上に金融緩和を支持する傾向が見られた。結果は、日本におけるイデオロギーと政策選好の関係が欧米とは異なる背景について、情報環境が重要な役割を果たしていることを示唆している。
+
+On specific policies, voters and political parties representing "left" and "right" in Japan are known to hold "twisted" policy preferences that conflict with left and right in western countries. Especially on monetary easing, in west, left tends to be more supportive of its expansion than right; In Japan, left is consistently opposing to this policy. Scholars provide various explanations for this pattern, but none has been assessed empirically. In the current study, we conduct survey experiment of Japanese voters to explore the effect of information environment on the relationship between ideology and monetary easing preferences. The result shows that "left" voters support monetary easing the same or more than "right" voters if and only if both the "reducing poverty" framing and the endorsement of western economic experts are provided. The finding implies that the information environment plays a critical role in explaining “twisted” Japanese policy preferences.
 
 ## 関連ファイル
 
 レポジトリごとCloneもしくはダウンロードして、分析コードファイルを実行してください。分析コードはR言語で記述されています。
 
-* 実験データ（RDS形式） [data_public/main_data_v1.rds](data_public/main_data_v1.rds)
-* 実験データ（STATA13形式） [data_public/main_data_v1.dta](data_public/main_data_v1.dta)
+* 実験データ（RDS形式） [data_public/main_data_v3.rds](data_public/main_data_v1.rds)
+* 実験データ（STATA13形式） [data_public/main_data_v3.dta](data_public/main_data_v1.dta)
 
-* 分析コードファイル [src/main_analysis.R](src/main_analysis.R)
-* 分析コードファイルのアウトプット（PDF） [src/main_analysis.pdf](src/main_analysis.pdf)
-* 分析コードファイルのアウトプット（オンライン） [src/main_analysis.md](src/main_analysis.md)
+* 分析コードファイル [src/main_analysis_v4.R](src/main_analysis.R)
+* 分析コードファイルのアウトプット（PDF） [src/main_analysis_v4.pdf](src/main_analysis.pdf)
+* 分析コードファイルのアウトプット（オンライン） [src/main_analysis_v4.md](src/main_analysis.md)
 
 ## ライセンス
 
