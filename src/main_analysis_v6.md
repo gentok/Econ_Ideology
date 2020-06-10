@@ -82,9 +82,8 @@ table(d$satisficer)
 sort(d$surveytime, decreasing = TRUE)[1:20]
 ```
 
-    ##  [1] 568.70000  84.55000  75.63333  75.28333  74.76667  73.08333  64.71667  58.91667
-    ##  [9]  55.40000  50.83333  48.35000  47.83333  47.58333  47.26667  47.23333  45.21667
-    ## [17]  43.53333  42.53333  40.80000  40.78333
+    ##  [1] 568.70000  84.55000  75.63333  75.28333  74.76667  73.08333  64.71667  58.91667  55.40000  50.83333
+    ## [11]  48.35000  47.83333  47.58333  47.26667  47.23333  45.21667  43.53333  42.53333  40.80000  40.78333
 
 ``` r
 d <- d[which(d$satisficer==0),] # Not Satisficers
@@ -1510,6 +1509,25 @@ ggsave("../out/v6_expres_2.png", p, width=8, height=5)
 # ggsave("../out/v6_expres_2.pdf", p, width=8, height=5, family = "Japan1")
 ```
 
+``` r
+p <- p + scale_color_manual(name="", values=c("black","gray30","gray60"),
+                       drop = FALSE)
+```
+
+    ## Scale for 'colour' is already present. Adding another scale for 'colour', which will replace the existing
+    ## scale.
+
+``` r
+p
+```
+
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-49-1.png)<!-- -->
+
+``` r
+ggsave("../out/v6_expres_2_gray.png", p, width=8, height=5)
+# ggsave("../out/v6_expres_2_gray.pdf", p, width=8, height=5, family = "Japan1")
+```
+
 #### 「わからない」回答を除外した場合（統制変数無）（図A13）
 
 ``` r
@@ -1517,7 +1535,7 @@ p <- exportsimplot(nmgdt_1, "分析結果の詳細については回帰表を参
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-49-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-51-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_expres_n1.png", p, width=8, height=5)
@@ -1530,7 +1548,7 @@ p <- exportsimplot(nmgdt_2, "分析結果の詳細については回帰表を参
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-51-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-53-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_expres_n2.png", p, width=8, height=5)
@@ -1543,7 +1561,7 @@ p <- exportsimplot(fmgdt_1, "分析結果の詳細については回帰表を参
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-53-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-55-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_expres_f1.png", p, width=8, height=5)
@@ -1556,7 +1574,7 @@ p <- exportsimplot(fmgdt_2, "分析結果の詳細については回帰表を参
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-55-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-57-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_expres_f2.png", p, width=8, height=5)
@@ -1734,7 +1752,7 @@ p <- exporthtestplot("main_base", "分析結果の詳細については回帰表
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-59-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-61-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_htestres_1.png", p, width=8, height=5)
@@ -1747,11 +1765,30 @@ p <- exporthtestplot("main_ext", "分析結果の詳細については表１を�
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-61-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-63-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_htestres_2.png", p, width=8, height=5)
 # ggsave("../out/v6_htestres_2.pdf", p, width=8, height=5, family = "Japan1")
+```
+
+``` r
+p <- p + scale_color_manual(name="", values=c("black","gray30","gray60"),
+                              drop = FALSE)
+```
+
+    ## Scale for 'colour' is already present. Adding another scale for 'colour', which will replace the existing
+    ## scale.
+
+``` r
+p
+```
+
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-65-1.png)<!-- -->
+
+``` r
+ggsave("../out/v6_htestres_2_gray.png", p, width=8, height=5)
+# ggsave("../out/v6_htestres_2_gray.pdf", p, width=8, height=5, family = "Japan1")
 ```
 
 #### 「わからない」回答を除外した場合（統制変数無）（図A12）
@@ -1761,7 +1798,7 @@ p <- exporthtestplot("mis_base", "分析結果の詳細については回帰表�
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-63-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-67-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_htestres_n1.png", p, width=8, height=5)
@@ -1774,7 +1811,7 @@ p <- exporthtestplot("mis_ext", "分析結果の詳細については回帰表�
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-65-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-69-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_htestres_n2.png", p, width=8, height=5)
@@ -1787,7 +1824,7 @@ p <- exporthtestplot("dropfail_base", "分析結果の詳細については回�
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-67-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-71-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_htestres_f1.png", p, width=8, height=5)
@@ -1800,7 +1837,7 @@ p <- exporthtestplot("dropfail_ext", "分析結果の詳細については回帰
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-69-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-73-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_htestres_f2.png", p, width=8, height=5)
@@ -2767,7 +2804,7 @@ p <- exportsimplot(mh2x_mgdt[which(mh2x_mgdt$mod==1),],
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-83-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-87-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_h2x_expres_1.png", p, width=8, height=5)
@@ -2782,7 +2819,7 @@ p <- exportsimplot(mh2x_mgdt[which(mh2x_mgdt$mod==2),],
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-85-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-89-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_h2x_expres_2.png", p, width=8, height=5)
@@ -2797,7 +2834,7 @@ p <- exportsimplot(nmh2x_mgdt[which(nmh2x_mgdt$mod==1),],
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-87-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-91-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_h2x_expres_n1.png", p, width=8, height=5)
@@ -2812,7 +2849,7 @@ p <- exportsimplot(nmh2x_mgdt[which(nmh2x_mgdt$mod==2),],
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-89-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-93-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_h2x_expres_n2.png", p, width=8, height=5)
@@ -2827,7 +2864,7 @@ p <- exportsimplot(fmh2x_mgdt[which(fmh2x_mgdt$mod==1),],
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-91-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-95-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_h2x_expres_f1.png", p, width=8, height=5)
@@ -2842,7 +2879,7 @@ p <- exportsimplot(fmh2x_mgdt[which(fmh2x_mgdt$mod==2),],
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-93-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-97-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_h2x_expres_f2.png", p, width=8, height=5)
@@ -2944,7 +2981,7 @@ p <- exporth2xplot("H2X（2.経済成長＆格差縮小v.s.1.経済成長）の�
 p
 ```
 
-![](main_analysis_v6_files/figure-gfm/unnamed-chunk-97-1.png)<!-- -->
+![](main_analysis_v6_files/figure-gfm/unnamed-chunk-101-1.png)<!-- -->
 
 ``` r
 ggsave("../out/v6_h2xres.png", p, width=8, height=5)

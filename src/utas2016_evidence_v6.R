@@ -96,17 +96,17 @@ m2 <- lm(easing ~ ide + abesup + fem +
 summary(m2)
 
 table_coef(list(m1,m2), single.row = TRUE, 
-       file.name="../out/utas16_evidence_ols.tex",
-       custom.variable.names = c("(定数項)","自己申告イデオロギー",
-                             "安倍首相の業績評価","性別(女性)",
-                             "20代(vs.70代以上)","30代(vs.70代以上)",
-                             "40代(vs.70代以上)","50代(vs.70代以上)",
-                             "60代(vs.70代以上)",
-                             "短期大学・専門学校卒(vs.高卒以下)",
-                             "大学・大学院卒(vs.高卒以下)"),
-       dcolumn = TRUE, fontsize = "scriptsize", float.pos = "ht!!",
-       caption = "2016年東大朝日調査を用いた金融緩和政策に対する評価の決定要因に関する重回帰分析",
-       label="utas16_olstab")
+           file.name="../out/utas16_evidence_ols.tex",
+           custom.variable.names = c("(定数項)","自己申告イデオロギー",
+                                     "安倍首相の業績評価","性別(女性)",
+                                     "20代(vs.70代以上)","30代(vs.70代以上)",
+                                     "40代(vs.70代以上)","50代(vs.70代以上)",
+                                     "60代(vs.70代以上)",
+                                     "短期大学・専門学校卒(vs.高卒以下)",
+                                     "大学・大学院卒(vs.高卒以下)"),
+           dcolumn = TRUE, fontsize = "scriptsize", float.pos = "ht!!",
+           caption = "2016年東大朝日調査を用いた金融緩和政策に対する評価の決定要因に関する重回帰分析",
+           label="utas16_olstab")
 tmp <- readLines("../out/utas16_evidence_ols.tex")
 # tmp <- iconv(tmp, from="SHIFT-JIS", to="UTF-8")
 writeLines(tmp, "../out/utas16_evidence_ols.tex", useBytes = TRUE)
@@ -119,6 +119,7 @@ dplot <- d[which(!is.na(d$abesup5)),]
 
 library(ggplot2)
 
+#+ fig.width=8, fig.height=5, dev="png", dpi=300, echo=TRUE
 p <- ggplot(dplot, aes(x=ide,y=easing)) + 
   geom_jitter(width=0.1, color="gray50") + 
   geom_smooth(method='lm', color="black", fill="orange", alpha=0.8) + 
@@ -126,10 +127,10 @@ p <- ggplot(dplot, aes(x=ide,y=easing)) +
   xlab("自己申告イデオロギー(11段階)") + ylab("日本銀行の金融緩和策評価") + 
   scale_x_continuous(breaks=c(-5,0,5),labels=c("　最も\n　左","中間／\n無回答","最も　\n右　")) + 
   scale_y_continuous(breaks=c(1,2,3,4,5),labels=c("評価しない",
-                                              "どちらかといえば\n評価しない",
-                                              "どちらともいえない/\n無回答",
-                                              "どちらかといえば\n評価する",
-                                              "評価する")) + 
+                                                  "どちらかといえば\n評価しない",
+                                                  "どちらともいえない/\n無回答",
+                                                  "どちらかといえば\n評価する",
+                                                  "評価する")) + 
   labs(caption=paste("データは東京大学谷口研究室・朝日新聞社共同調査有権者調査(2016年参院選)を使用。",
                      "安倍首相の業績評価は問12(Ｗ2Ｑ12)、金融緩和政策の評価は問15(Ｗ2Ｑ15)、イデオロギーは問21(Ｗ2Ｑ21)を参照。",
                      "灰色の点は散布図(見やすくするためジッタを適用）、直線とその上下の塗りつぶしは線形回帰直線と95％信頼区間を示す。",
@@ -142,6 +143,31 @@ p
 #+ eval=FALSE
 ggsave("../out/utas16_evidence.png", p, width=8, height=5)
 # ggsave("../out/utas16_evidence.pdf", p, width=8, height=5, family="Japan1")
+
+#+ fig.width=8, fig.height=5, dev="png", dpi=300, echo=TRUE
+p <- ggplot(dplot, aes(x=ide,y=easing)) + 
+  geom_jitter(width=0.1, color="gray60") + 
+  geom_smooth(method='lm', color="black", fill="gray30", alpha=0.8) + 
+  facet_grid(.~abesup5) + 
+  xlab("自己申告イデオロギー(11段階)") + ylab("日本銀行の金融緩和策評価") + 
+  scale_x_continuous(breaks=c(-5,0,5),labels=c("　最も\n　左","中間／\n無回答","最も　\n右　")) + 
+  scale_y_continuous(breaks=c(1,2,3,4,5),labels=c("評価しない",
+                                                  "どちらかといえば\n評価しない",
+                                                  "どちらともいえない/\n無回答",
+                                                  "どちらかといえば\n評価する",
+                                                  "評価する")) + 
+  labs(caption=paste("データは東京大学谷口研究室・朝日新聞社共同調査有権者調査(2016年参院選)を使用。",
+                     "安倍首相の業績評価は問12(Ｗ2Ｑ12)、金融緩和政策の評価は問15(Ｗ2Ｑ15)、イデオロギーは問21(Ｗ2Ｑ21)を参照。",
+                     "灰色の点は散布図(見やすくするためジッタを適用）、直線とその上下の塗りつぶしは線形回帰直線と95％信頼区間を示す。",
+                     sep="\n"),
+       subtitle = "安倍首相の業績評価") + 
+  theme_bw() + 
+  theme(plot.subtitle = element_text(hjust=0.5))
+p
+
+#+ eval=FALSE
+ggsave("../out/utas16_evidence_gray.png", p, width=8, height=5)
+# ggsave("../out/utas16_evidence_gray.pdf", p, width=8, height=5, family="Japan1")
 
 #+ eval=FALSE, echo=FALSE
 # Exporting HTML & PDF File

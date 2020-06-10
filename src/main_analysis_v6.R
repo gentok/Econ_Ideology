@@ -1224,6 +1224,15 @@ ggsave("../out/v6_expres_2.png", p, width=8, height=5)
 # ggsave("../out/v6_expres_2.pdf", p, width=8, height=5, family = "Japan1")
 
 #'
+#+ fig.width=8, fig.height=5, dev="png", dpi=300, echo=TRUE
+p <- p + scale_color_manual(name="", values=c("black","gray30","gray60"),
+                       drop = FALSE)
+p
+#+ eval=FALSE
+ggsave("../out/v6_expres_2_gray.png", p, width=8, height=5)
+# ggsave("../out/v6_expres_2_gray.pdf", p, width=8, height=5, family = "Japan1")
+
+#'
 #' #### 「わからない」回答を除外した場合（統制変数無）（図A13）
 #'
 #+ fig.width=8, fig.height=5, dev="png", dpi=300, echo=TRUE
@@ -1442,6 +1451,15 @@ p
 #+ eval=FALSE
 ggsave("../out/v6_htestres_2.png", p, width=8, height=5)
 # ggsave("../out/v6_htestres_2.pdf", p, width=8, height=5, family = "Japan1")
+
+#'
+#+ fig.width=8, fig.height=5, dev="png", dpi=300, echo=TRUE
+p <- p + scale_color_manual(name="", values=c("black","gray30","gray60"),
+                              drop = FALSE)
+p
+#+ eval=FALSE
+ggsave("../out/v6_htestres_2_gray.png", p, width=8, height=5)
+# ggsave("../out/v6_htestres_2_gray.pdf", p, width=8, height=5, family = "Japan1")
 
 #'
 #' #### 「わからない」回答を除外した場合（統制変数無）（図A12）
