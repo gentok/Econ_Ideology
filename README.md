@@ -1,11 +1,11 @@
 # 金融緩和実験レプリケーションデータ
 
-## 日本における「ねじれ」た金融緩和選好を説明する：イデオロギーと政策選好の関係に情報環境が与える影響の実験的検証
+## 加藤言人・安中進（2020）日本における「ねじれ」た金融緩和選好を説明する：イデオロギーと政策選好の関係に情報環境が与える影響の実験的検証. *選挙研究*, 36(2), 151–167.
 
-Explaining "Twisted" Preferences Toward Monetary Easing in Japan: Experimental Evidence on the Effect of Information Environment on the Relationship Between Ideology and Policy Preferences
+Kato, Gento, & Annaka Susumu (2020). Explaining `Twisted’ Preferences Toward Monetary Easing in Japan: Experimental Evidence on the Effect of Information Environment on the Relationship Between Ideology and Policy Preferences. *Japanese Journal of Electoral Studies*, 36(2), 151–167.
 
 <!-- * #### [ワーキングペーパー (4/10/2020)](paper/Econ_Ideology_Paper_v6_0.pdf) -->
-* #### [オンライン付録 (5/21/2020)](paper/Econ_Ideology_Paper_v6_appendix.pdf)
+* #### [オンライン付録/Online Appenix (5/21/2020)](paper/Econ_Ideology_Paper_v6_appendix.pdf)
 <!-- * [ワーキングペーパー (9/6/2019)](paper/Econ_Ideology_Paper.pdf) -->
 
 ## 著者
